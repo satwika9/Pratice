@@ -190,6 +190,8 @@ namespace Pratice
             IWebElement win = driver.FindElement(By.Id("openwindow"));
             win.Click();
             Thread.Sleep(1000);
+            driver.SwitchTo().Window(driver.WindowHandles[1]);
+            driver.Close();
             driver.SwitchTo().Window(driver.WindowHandles[0]);
         }
 
@@ -200,6 +202,8 @@ namespace Pratice
             IWebElement Tab = driver.FindElement(By.Id("opentab"));
             Tab.Click();
             Thread.Sleep(1000);
+            driver.SwitchTo().Window(driver.WindowHandles[1]);
+             driver.Close();
             driver.SwitchTo().Window(driver.WindowHandles[0]);
         }
 
